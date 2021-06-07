@@ -10,4 +10,10 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="petify_logo">Petify Logo</string>
+
+    <!-- Strings related to Pet Food Search -->
+    <string name="pet_type">Pet's Type</string>
+    <string name="pet_breed">Pet's Breed</string>
+    <string name="pet_age">Pet's Age</string>
+    <string name="pet_Weight">Pet's Weight</string>
 </resources>
