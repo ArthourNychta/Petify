@@ -11,10 +11,12 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="22dp"
         android:text="Find Nearby Vet!"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="253dp"
-        tools:layout_editor_absoluteY="602dp" />
+        app:layout_constraintStart_toEndOf="@+id/btn_petaccessories"
+        app:layout_constraintTop_toBottomOf="@+id/btn_findnearbyvet" />
 
     <TextView
         android:id="@+id/textView4"
@@ -22,34 +24,48 @@
         android:layout_height="wrap_content"
         android:text="Pet Accessories"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="602dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_petaccessories"
+        app:layout_constraintVertical_bias="0.22" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="17dp"
         android:text="Pet Food"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="277dp"
-        tools:layout_editor_absoluteY="391dp" />
+        app:layout_constraintStart_toEndOf="@+id/btn_petfood2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_petfood" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="83dp"
         android:layout_height="60dp"
-        app:srcCompat="@drawable/homeicon"
-        tools:layout_editor_absoluteX="170dp"
-        tools:layout_editor_absoluteY="38dp"></ImageView>
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/welcometext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.181"
+        app:srcCompat="@drawable/homeicon"></ImageView>
 
     <TextView
         android:id="@+id/welcometext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="40dp"
         android:text="Welcome, Guest!"
         android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -57,58 +73,65 @@
         android:id="@+id/btn_petfood"
         style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="165dp"
-        android:layout_height="159dp"
-        android:layout_marginEnd="4dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="16dp"
         android:outlineProvider="none"
-        android:scaleType="centerInside"
+        android:scaleType="fitXY"
+        android:scaleX="1"
+        android:scaleY="0.9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_gettoknowyourpet"
-        app:srcCompat="@drawable/petfood"
-        tools:layout_editor_absoluteY="219dp" />
+        app:layout_constraintTop_toBottomOf="@+id/welcometext"
+        app:srcCompat="@drawable/petfood" />
+
+    <ImageButton
+        android:id="@+id/btn_petfood2"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="165dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="49dp"
+        android:outlineProvider="none"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/btn_petfood"
+        app:layout_constraintTop_toBottomOf="@+id/welcometext"
+        app:srcCompat="@drawable/gettoknowyourpet" />
 
     <ImageButton
         android:id="@+id/btn_petaccessories"
         style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="165dp"
-        android:layout_height="159dp"
-        android:layout_marginBottom="56dp"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.304"
-        app:srcCompat="@drawable/petaccessories"
-        tools:layout_editor_absoluteX="39dp" />
+        android:layout_height="160dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
+        android:scaleType="fitXY"
+        android:scaleY="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/petaccessories" />
 
     <ImageButton
         android:id="@+id/btn_findnearbyvet"
         style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="165dp"
-        android:layout_height="159dp"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitXY"
+        android:scaleY="0.9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_petaccessories"
-        app:layout_constraintTop_toBottomOf="@+id/btn_petfood"
-        app:layout_constraintVertical_bias="0.265"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:srcCompat="@drawable/findnearbyvet" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="60dp"
         android:text="Get To Know Your Pet!"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="391dp" />
-
-    <ImageButton
-        android:id="@+id/btn_gettoknowyourpet"
-        style="@android:style/Widget.Holo.ImageButton"
-        android:layout_width="165dp"
-        android:layout_height="159dp"
-        android:scaleType="centerInside"
-        app:srcCompat="@drawable/gettoknowyourpet"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="219dp" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_petfood"
+        app:layout_constraintTop_toBottomOf="@+id/btn_petfood2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
