@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/FFD368"
+    tools:context=".DogFoodPage.DogFoodPage">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="380dp"
+        android:layout_height="229dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/rectangle"
+        tools:layout_editor_absoluteY="-25dp" />
+
+    <Button
+        android:id="@+id/btn_checkout"
+        android:layout_width="277dp"
+        android:layout_height="69dp"
+        android:layout_gravity="start"
+        android:backgroundTint="#7EDF6E"
+        android:text="Checkout"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:cornerRadius="10dp"
+        app:strokeColor="#7EDF6E"
+        app:strokeWidth="2dp"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="74dp" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Total : Rp. "
+        android:textColor="#743E03"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/et_style"
+        android:backgroundTint="@android:color/white"
+        android:hint="0"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textAlignment="center"
+        android:textColor="#743E03"
+        android:textColorHint="#743E03"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="39dp" />
+
+    <ImageButton
+        android:id="@+id/btn_cart"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/cart1"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="74dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pet Food"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="543dp"
+        android:layout_height="414dp"
+        android:scaleType="center"
+        app:srcCompat="@drawable/t"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="256dp" />
+
+    <ImageButton
+        android:id="@+id/btn_image1"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="118dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="56dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/_0"
+        tools:layout_editor_absoluteY="266dp" />
+
+    <ImageButton
+        android:id="@+id/btn_image2"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="119dp"
+        android:layout_height="162dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/_1"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <ImageButton
+        android:id="@+id/btn_image3"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="118dp"
+        android:layout_height="170dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/_2"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="491dp" />
+
+    <ImageButton
+        android:id="@+id/btn_image4"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="116dp"
+        android:layout_height="168dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/_3"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="491dp" />
+
+    <TextView
+        android:id="@+id/textimg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        tools:layout_editor_absoluteX="239dp"
+        tools:layout_editor_absoluteY="590dp"
+        tools:text="Good Dog New Formula" />
+
+    <TextView
+        android:id="@+id/txtimgprice3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp. 70.500"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="600dp" />
+
+    <TextView
+        android:id="@+id/textimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        tools:layout_editor_absoluteX="229dp"
+        tools:layout_editor_absoluteY="359dp"
+        tools:text="Alpo Dog Food Can Prime Cuts" />
+
+    <TextView
+        android:id="@+id/txtimgprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp. 18.000"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <ImageButton
+        android:id="@+id/btn_plus4"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/_5"
+        tools:layout_editor_absoluteX="298dp"
+        tools:layout_editor_absoluteY="620dp" />
+
+    <ImageButton
+        android:id="@+id/btn_minus4"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/_4"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="620dp" />
+
+    <ImageButton
+        android:id="@+id/btn_minus2"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/_4"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="391dp" />
+
+    <ImageButton
+        android:id="@+id/btn_plus2"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/_5"
+        tools:layout_editor_absoluteX="298dp"
+        tools:layout_editor_absoluteY="391dp" />
+
+    <ImageButton
+        android:id="@+id/btn_plus1"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/_5"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="392dp" />
+
+    <TextView
+        android:id="@+id/txtimgprice2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp. 100.000"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="600dp" />
+
+    <ImageButton
+        android:id="@+id/btn_plus3"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/_5"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="620dp" />
+
+    <ImageButton
+        android:id="@+id/btn_minus3"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/_4"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="620dp" />
+
+    <TextView
+        android:id="@+id/textimg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="590dp"
+        tools:text="Royal Canin Dog Food Medium" />
+
+    <ImageButton
+        android:id="@+id/btn_minus1"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/_4"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="392dp" />
+
+    <TextView
+        android:id="@+id/textimg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="363dp"
+        tools:text="Pedigree Chicken Dog Food" />
+
+    <TextView
+        android:id="@+id/txtimgprice1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp. 25.000"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <TextView
+        android:id="@+id/quantity1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#EBEBEB"
+        android:hint="0"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_plus1"
+        app:layout_constraintStart_toEndOf="@+id/btn_minus1"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <TextView
+        android:id="@+id/quantity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#EBEBEB"
+        android:hint="0"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_plus2"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toEndOf="@+id/btn_minus2"
+        tools:layout_editor_absoluteY="392dp" />
+
+    <TextView
+        android:id="@+id/quantity3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#EBEBEB"
+        android:hint="0"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_plus3"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toEndOf="@+id/btn_minus3"
+        tools:layout_editor_absoluteY="620dp" />
+
+    <TextView
+        android:id="@+id/quantity4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#EBEBEB"
+        android:hint="0"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_plus4"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toEndOf="@+id/btn_minus4"
+        tools:layout_editor_absoluteY="620dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

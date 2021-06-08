@@ -8,7 +8,7 @@
     tools:context=".PetFoodSearch.PetFoodSearch_Page">
 
     <EditText
-        android:id="@+id/pets_type4"
+        android:id="@+id/pet_Weight"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="28dp"
@@ -21,10 +21,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pets_type3" />
+        app:layout_constraintTop_toBottomOf="@+id/pet_age" />
 
     <EditText
-        android:id="@+id/pets_type3"
+        android:id="@+id/pet_age"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="28dp"
@@ -37,10 +37,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pets_type2" />
+        app:layout_constraintTop_toBottomOf="@+id/pet_breed" />
 
     <EditText
-        android:id="@+id/pets_type2"
+        android:id="@+id/pet_breed"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="28dp"
@@ -93,9 +93,10 @@
         android:layout_width="293dp"
         android:layout_height="49dp"
         android:background="#743E03"
+        android:backgroundTint="#743E03"
         android:text="Find It!"
         android:textColor="#FFFFFF"
-        app:iconTint="#EAE7E7"
+        app:iconTint="#743E03"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
