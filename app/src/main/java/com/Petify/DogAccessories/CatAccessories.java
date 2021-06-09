@@ -1,22 +1,20 @@
-package com.Petify.DogFoodPage;
+package com.Petify.DogAccessories;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.Petify.DogAccessories.CatAccessories;
 import com.Petify.PaymentSuccess.PaymentSuccess;
 import com.Petify.R;
 
-public class DogFoodPage extends AppCompatActivity implements View.OnClickListener {
+public class CatAccessories extends AppCompatActivity implements View.OnClickListener {
     int number, number2, number3, number4, check=0;
     TextView quantity1,quantity2,quantity3,quantity4,totalPrice;
     ImageView plus, minus, plus2, minus2, plus3, minus3, plus4, minus4;
@@ -26,7 +24,7 @@ public class DogFoodPage extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dog_food_page);
+        setContentView(R.layout.activity_cat_accessories);
         context = this;
         plus = (ImageView) findViewById(R.id.btn_plus1);
         minus = (ImageView) findViewById(R.id.btn_minus1);
@@ -54,7 +52,7 @@ public class DogFoodPage extends AppCompatActivity implements View.OnClickListen
                 number++;
                 check=1;
                 quantity1.setText(""+number);
-                price1 = number*15000;
+                price1 = number*18000;
             }
         });
 
@@ -62,11 +60,11 @@ public class DogFoodPage extends AppCompatActivity implements View.OnClickListen
             public void onClick(View v){
                 if(number==0){
                     quantity1.setText(""+0);
-                    price1 = number*15000;
+                    price1 = number*18000;
                 }else{
-                number--;
-                quantity1.setText(""+number);
-                price1 = number*15000;
+                    number--;
+                    quantity1.setText(""+number);
+                    price1 = number*18000;
                 }
             }
         });
@@ -76,7 +74,7 @@ public class DogFoodPage extends AppCompatActivity implements View.OnClickListen
                 number2++;
                 check=1;
                 quantity2.setText(""+number2);
-                price2 = number2*18500;
+                price2 = number2*140000;
             }
         });
 
@@ -84,11 +82,11 @@ public class DogFoodPage extends AppCompatActivity implements View.OnClickListen
             public void onClick(View v){
                 if(number2==0){
                     quantity2.setText(""+0);
-                    price2 = number2*18500;
+                    price2 = number2*140000;
                 }else{
                     number2--;
                     quantity2.setText(""+number2);
-                    price2 = number2*18500;
+                    price2 = number2*140000;
                 }
             }
         });
@@ -98,7 +96,7 @@ public class DogFoodPage extends AppCompatActivity implements View.OnClickListen
                 number3++;
                 check=1;
                 quantity3.setText(""+number3);
-                price3 = number3*100000;
+                price3 = number3*108000;
             }
         });
 
@@ -106,11 +104,11 @@ public class DogFoodPage extends AppCompatActivity implements View.OnClickListen
             public void onClick(View v){
                 if(number3==0){
                     quantity3.setText(""+0);
-                    price3 = number3*100000;
+                    price3 = number3*108000;
                 }else{
                     number3--;
                     quantity3.setText(""+number3);
-                    price3 = number3*100000;
+                    price3 = number3*108000;
                 }
             }
         });
@@ -120,7 +118,7 @@ public class DogFoodPage extends AppCompatActivity implements View.OnClickListen
                 number4++;
                 check=1;
                 quantity4.setText(""+number4);
-                price4 = number4*70500;
+                price4 = number4*109000;
             }
         });
 
@@ -128,11 +126,11 @@ public class DogFoodPage extends AppCompatActivity implements View.OnClickListen
             public void onClick(View v){
                 if(number4==0){
                     quantity4.setText(""+0);
-                    price4 = number4*70500;
+                    price4 = number4*109000;
                 }else{
                     number4--;
                     quantity4.setText(""+number4);
-                    price4 = number4*70500;
+                    price4 = number4*109000;
                 }
             }
         });

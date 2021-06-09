@@ -1,22 +1,20 @@
 package com.Petify.DogFoodPage;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.Petify.DogAccessories.CatAccessories;
 import com.Petify.PaymentSuccess.PaymentSuccess;
 import com.Petify.R;
 
-public class DogFoodPage extends AppCompatActivity implements View.OnClickListener {
+public class CatFoodPage extends AppCompatActivity implements View.OnClickListener{
     int number, number2, number3, number4, check=0;
     TextView quantity1,quantity2,quantity3,quantity4,totalPrice;
     ImageView plus, minus, plus2, minus2, plus3, minus3, plus4, minus4;
@@ -26,7 +24,7 @@ public class DogFoodPage extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dog_food_page);
+        setContentView(R.layout.activity_cat_food_page);
         context = this;
         plus = (ImageView) findViewById(R.id.btn_plus1);
         minus = (ImageView) findViewById(R.id.btn_minus1);
@@ -64,9 +62,9 @@ public class DogFoodPage extends AppCompatActivity implements View.OnClickListen
                     quantity1.setText(""+0);
                     price1 = number*15000;
                 }else{
-                number--;
-                quantity1.setText(""+number);
-                price1 = number*15000;
+                    number--;
+                    quantity1.setText(""+number);
+                    price1 = number*15000;
                 }
             }
         });

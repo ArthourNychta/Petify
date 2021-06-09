@@ -12,8 +12,8 @@
     <string name="petify_logo">Petify Logo</string>
 
     <!-- Strings related to Pet Food Search -->
-    <string name="pet_type">Pet's Type</string>
-    <string name="pet_breed">Pet's Breed</string>
-    <string name="pet_age">Pet's Age</string>
-    <string name="pet_Weight">Pet's Weight</string>
+    <string name="pet_type">Pets Type</string>
+    <string name="pet_breed">Pets Breed</string>
+    <string name="pet_age">Pets Age</string>
+    <string name="pet_Weight">Pets Weight</string>
 </resources>
