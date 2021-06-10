@@ -5,60 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/F9A243"
-    tools:context=".PetFoodSearch.PetFoodSearch_Page">
-
-    <EditText
-        android:id="@+id/pet_Weight"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/et_style"
-        android:backgroundTint="@android:color/white"
-        android:hint="@string/pet_Weight"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pet_age" />
-
-    <EditText
-        android:id="@+id/pet_age"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/et_style"
-        android:backgroundTint="@android:color/white"
-        android:hint="@string/pet_age"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pet_breed" />
-
-    <EditText
-        android:id="@+id/pet_breed"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/et_style"
-        android:backgroundTint="@android:color/white"
-        android:hint="@string/pet_breed"
-        android:selectAllOnFocus="true"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pets_type" />
+    android:backgroundTint="@color/F9A243"
+    tools:context=".PetAccessoriesSearch.PetAccessories">
 
     <EditText
         android:id="@+id/pets_type"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:autofillHints="@string/prompt_email"
         android:background="@drawable/et_style"
         android:backgroundTint="@android:color/white"
@@ -70,22 +24,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <EditText
+        android:id="@+id/pet_race"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="@android:color/white"
+        android:hint="Pet Race"
+        android:selectAllOnFocus="true"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pets_type" />
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="230dp"
         android:layout_height="154dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pet_Weight"
-        app:layout_constraintVertical_bias="0.888"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.972"
         app:srcCompat="@drawable/petify_logo_2" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="370dp"
         android:layout_height="99dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="64dp"
         android:text="Fill in Your Pet’s Information"
         android:textAlignment="center"
         android:textSize="40sp"
@@ -109,8 +79,7 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintVertical_bias="0.675"
         app:strokeColor="#743E03"
         app:strokeWidth="2dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

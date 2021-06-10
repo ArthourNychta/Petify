@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/FFD368"
-    tools:context=".DogFoodPage.DogFoodPage">
+    tools:context=".DogAccessories.CatAccessories">
 
     <TextView
         android:id="@+id/textimg"
@@ -86,7 +86,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pet Food"
+        android:text="Pet Toys"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -110,36 +110,72 @@
         app:srcCompat="@drawable/t" />
 
     <ImageView
-        android:id="@+id/btn_image1"
+        android:id="@+id/btn_cataccsimg3"
         android:layout_width="111dp"
-        android:layout_height="154dp"
+        android:layout_height="153dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.156"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/_0" />
+        app:srcCompat="@drawable/_d" />
+
+    <ImageView
+        android:id="@+id/btn_cataccimg4"
+        android:layout_width="115dp"
+        android:layout_height="153dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.878"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.901"
+        app:srcCompat="@drawable/_a" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="110dp"
+        android:layout_height="155dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501"
+        app:srcCompat="@drawable/_c" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="111dp"
+        android:layout_height="152dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.899"
+        app:srcCompat="@drawable/_b" />
 
     <TextView
         android:id="@+id/textimg1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pedigree Chicken Dog Food"
+        android:text="Cat Stick Cute With Small Bell Fur"
         android:textColor="#000000"
-        android:textSize="8sp"
+        android:textSize="6sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.174"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.526"
-        tools:text="Pedigree Chicken Dog Food" />
+        tools:text="Cat Stick Cute With Small Bell Fur" />
 
     <TextView
         android:id="@+id/txtimgprice1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rp. 25.000"
+        android:text="Rp. 18.000"
         android:textColor="#000000"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -188,41 +224,6 @@
         app:layout_constraintVertical_bias="0.126"
         app:strokeColor="#7EDF6E"
         app:strokeWidth="2dp" />
-
-    <ImageView
-        android:id="@+id/btn_image2"
-        android:layout_width="114dp"
-        android:layout_height="158dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.851"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/_1" />
-
-    <ImageView
-        android:id="@+id/btn_image3"
-        android:layout_width="118dp"
-        android:layout_height="161dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.885"
-        app:srcCompat="@drawable/_2" />
-
-    <ImageView
-        android:id="@+id/btn_image4"
-        android:layout_width="118dp"
-        android:layout_height="161dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.863"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.885"
-        app:srcCompat="@drawable/_3" />
 
     <ImageView
         android:id="@+id/btn_minus2"
@@ -324,7 +325,7 @@
         android:id="@+id/txtimgprice3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rp. 100.000"
+        android:text="Rp. 108.000"
         android:textColor="#000000"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -338,7 +339,7 @@
         android:id="@+id/txtimgprice4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rp. 70.500"
+        android:text="Rp. 109.000"
         android:textColor="#000000"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -367,7 +368,7 @@
         android:id="@+id/textimg3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Royal Canin Dog Food Medium"
+        android:text="Cat Laser LED "
         android:textColor="#000000"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -376,7 +377,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.843"
-        tools:text="Royal Canin Dog Food Medium" />
+        tools:text="Cat Laser LED " />
 
     <TextView
         android:id="@+id/textimg2"
@@ -397,7 +398,7 @@
         android:id="@+id/txtimgprice2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rp. 18.500"
+        android:text="Rp. 140.000"
         android:textColor="#000000"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -467,6 +468,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.58"
         app:srcCompat="@drawable/_5" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
