@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-
 import com.Petify.PetAccessoriesSearch.PetAccessories;
 import com.Petify.PetFoodSearch.PetFoodSearch_Page;
 import com.Petify.R;
