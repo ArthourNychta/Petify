@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.Petify.HomePage.HomePage;
 import com.Petify.R;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends Activity implements View.OnClickListener
 {
@@ -19,6 +22,17 @@ public class Login extends Activity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         findViewById(R.id.Login).setOnClickListener(this);
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        FirebaseAuth mAuth;
+// ...
+// Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
+
+        SignInButton signInButton = findViewById(R.id.sign_in_button);
+        signInButton.setSize(SignInButton.SIZE_STANDARD);
+
     }
 
     @Override
