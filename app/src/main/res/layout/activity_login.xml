@@ -82,18 +82,19 @@
         android:id="@+id/Login"
         android:layout_width="351dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="52dp"
         android:src="@drawable/loginbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/sign_in_button"
-        android:layout_width="128dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="40dp"
+    <ImageView
+        android:id="@+id/Register"
+        android:layout_width="351dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="21dp"
+        android:src="@drawable/registerbtn"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Login" />
 
