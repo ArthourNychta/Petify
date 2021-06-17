@@ -1,5 +1,7 @@
 package com.Petify.Login;
 
+
+
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -19,7 +21,7 @@ public interface UserDao {
     User findByName(String Username, String Password);
 
     @Insert
-    void insertAll(User... users);
+    void insertUser(User... users);
 
     @Delete
     void delete(User user);

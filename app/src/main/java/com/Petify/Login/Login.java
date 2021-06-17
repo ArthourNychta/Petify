@@ -1,8 +1,11 @@
 package com.Petify.Login;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -10,26 +13,22 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.Petify.HomePage.HomePage;
 import com.Petify.R;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.SignInButton;
-import com.google.firebase.auth.FirebaseAuth;
+import com.Petify.Register.Register;
+
 import androidx.room.Room;
 
 public class Login extends Activity implements View.OnClickListener
 {
+    private AppDatabase db;
+    ProgressDialog p;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         findViewById(R.id.Login).setOnClickListener(this);
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-        FirebaseAuth mAuth;
-// ...
-// Initialize Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
+        findViewById(R.id.Register).setOnClickListener(this);
+        db = AppDatabase.getInstance(getApplicationContext());
     }
 
     @Override
@@ -41,31 +40,55 @@ public class Login extends Activity implements View.OnClickListener
 
         switch(v.getId()) {
             case R.id.Login:
-                try{
-                    if(username.length() > 0 && password.length() >0)
-                    {
-                        AppDatabase db = Room.databaseBuilder(getApplicationContext(),
-                                AppDatabase.class, "database-name").build();
-                        UserDao dao = db.userDao();
-
-//                        if(!name.isEmpty())
-//                        {
-//                            Toast.makeText(Login.this,"Successfully Logged In", Toast.LENGTH_LONG).show();
-//                            Intent intent = new Intent(Login.this, HomePage.class);
-//                            startActivity(intent);
-//                        }else{
-//                            Toast.makeText(Login.this,"Invalid Username/Password", Toast.LENGTH_LONG).show();
-//                        }
-                    }
-
-                }catch(Exception e)
-                {
-                    Toast.makeText(Login.this,e.getMessage(), Toast.LENGTH_LONG).show();
-                }
+                SyncTask sync = new SyncTask();
+                sync.execute(username, password);
+                break;
             case R.id.Register:
-                Intent intent1 = new Intent(Login.this, HomePage.class);
+                Intent intent1 = new Intent(Login.this, Register.class);
                 startActivity(intent1);
+                break;
         }
 //
+    }
+
+    private class SyncTask extends AsyncTask<String, Void, User> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            p = new ProgressDialog(Login.this);
+            p.setMessage("Logging in...");
+            p.setIndeterminate(false);
+            p.setCancelable(false);
+            p.show();
+        }
+
+        @Override
+        protected User doInBackground(String... strings) {
+            UserDao dao = db.userDao();
+            User temp = dao.findByName(strings[0], strings[1]);
+
+            return temp;
+
+        }
+
+        @Override
+        protected void onPostExecute(User temp){
+            try{
+                if(temp != null)
+                {
+                    Toast.makeText(Login.this,"Successfully Logged In", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Login.this, HomePage.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(Login.this,"Invalid Username/Password", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Login.this, Login.class);
+                    startActivity(intent);
+                }
+            }catch(Exception e)
+            {
+                Toast.makeText(Login.this,e.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        }
     }
 }

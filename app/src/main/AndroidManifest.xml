@@ -16,6 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Register.Register"></activity>
         <activity android:name=".gettoknowyourpagemenu.Gettoknowyourpet_Menu"></activity>
         <activity android:name=".DogFoodPage.CatFoodPage" />
         <activity android:name=".DogAccessories.CatAccessories" />
