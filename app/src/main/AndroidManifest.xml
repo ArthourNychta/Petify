@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Petify">
+        <activity android:name=".gettoknowyourpagemenu.Health_ArticlePage"></activity>
+        <activity android:name=".gettoknowyourpagemenu.ArticleDetail" />
+        <activity android:name=".gettoknowyourpagemenu.Food_ArticlePage" />
         <activity android:name=".Login.Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,20 +19,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register.Register"></activity>
-        <activity android:name=".gettoknowyourpagemenu.Gettoknowyourpet_Menu"></activity>
+        <activity android:name=".Register.Register" />
+        <activity android:name=".gettoknowyourpagemenu.Gettoknowyourpet_Menu" />
         <activity android:name=".DogFoodPage.CatFoodPage" />
         <activity android:name=".DogAccessories.CatAccessories" />
         <activity android:name=".DogAccessories.DogAccessories" />
         <activity android:name=".PetAccessoriesSearch.PetAccessories" />
         <activity android:name=".PaymentSuccess.PaymentSuccess" />
         <activity android:name=".DogFoodPage.DogFoodPage" />
-        <activity android:name=".PetFoodSearch.PetFoodSearch_Page" />
-        <!-- <activity android:name=".HomePage.HomePage" /> -->
+        <activity android:name=".PetFoodSearch.PetFoodSearch_Page" /> <!-- <activity android:name=".HomePage.HomePage" /> -->
         <activity
             android:name=".HomePage.HomePage"
-            android:label="@string/app_name">
-        </activity>
+            android:label="@string/app_name" />
     </application>
 
 </manifest>
