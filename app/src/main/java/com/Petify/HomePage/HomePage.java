@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.Petify.MapsActivity;
 import com.Petify.PetAccessoriesSearch.PetAccessories;
 import com.Petify.PetFoodSearch.PetFoodSearch_Page;
 import com.Petify.R;
@@ -43,8 +45,8 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener 
                 break;
             case R.id.btn_findnearbyvet:
                 Toast.makeText(this, "Redirecting to Find Nearby Vet Page", Toast.LENGTH_SHORT).show();
-//                Intent intent3 = new Intent(this, PetAccessories.class);
-//                startActivity(intent3);
+                Intent intent3 = new Intent(this, MapsActivity.class);
+                startActivity(intent3);
                 break;
         }
     }

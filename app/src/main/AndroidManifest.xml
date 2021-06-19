@@ -28,10 +28,10 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="${MAPS_API_KEY}" />>
 
         <activity
-            android:name=".MapPage.MapsActivity"
+            android:name=".MapsActivity"
             android:label="@string/title_activity_maps"></activity>
         <activity android:name=".gettoknowyourpagemenu.Health_ArticlePage" />
         <activity android:name=".gettoknowyourpagemenu.ArticleDetail" />
