@@ -17,6 +17,8 @@ import com.Petify.Register.Register;
 
 import androidx.room.Room;
 
+import java.lang.ref.WeakReference;
+
 public class Login extends Activity implements View.OnClickListener
 {
     private AppDatabase db;
@@ -27,8 +29,8 @@ public class Login extends Activity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         findViewById(R.id.Login).setOnClickListener(this);
-        findViewById(R.id.Register).setOnClickListener(this);
         db = AppDatabase.getInstance(getApplicationContext());
+        p = new ProgressDialog(Login.this);
     }
 
     @Override
@@ -40,32 +42,39 @@ public class Login extends Activity implements View.OnClickListener
 
         switch(v.getId()) {
             case R.id.Login:
-                SyncTask sync = new SyncTask();
+                SyncTask sync = new SyncTask(this);
                 sync.execute(username, password);
                 break;
-            case R.id.Register:
-                Intent intent1 = new Intent(Login.this, Register.class);
-                startActivity(intent1);
-                break;
         }
-//
     }
 
-    private class SyncTask extends AsyncTask<String, Void, User> {
+    private static class SyncTask extends AsyncTask<String, Void, User> {
+        private WeakReference<Login> activityWeakReference;
+
+        SyncTask(Login login) {
+            activityWeakReference = new WeakReference<Login>(login);
+        }
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            p = new ProgressDialog(Login.this);
-            p.setMessage("Logging in...");
-            p.setIndeterminate(false);
-            p.setCancelable(false);
-            p.show();
+            Login login =  activityWeakReference.get();
+            if(login == null || login.isFinishing()){
+                return;
+            }
+            login.p.setMessage("Logging in...");
+            login.p.setIndeterminate(false);
+            login.p.setCancelable(false);
+            login.p.show();
         }
 
         @Override
         protected User doInBackground(String... strings) {
-            UserDao dao = db.userDao();
+            Login login =  activityWeakReference.get();
+            if(login == null || login.isFinishing()){
+               return null;
+            }
+            UserDao dao = login.db.userDao();
             User temp = dao.findByName(strings[0], strings[1]);
 
             return temp;
@@ -74,20 +83,24 @@ public class Login extends Activity implements View.OnClickListener
 
         @Override
         protected void onPostExecute(User temp){
+            Login login =  activityWeakReference.get();
+            if(login == null || login.isFinishing()){
+                return;
+            }
             try{
                 if(temp != null)
                 {
-                    Toast.makeText(Login.this,"Successfully Logged In", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(Login.this, HomePage.class);
-                    startActivity(intent);
+                    Toast.makeText(login,"Successfully Logged In", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(login, HomePage.class);
+                    login.startActivity(intent);
                 }else{
-                    Toast.makeText(Login.this,"Invalid Username/Password", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(Login.this, Login.class);
-                    startActivity(intent);
+                    Toast.makeText(login, "Invalid Username/Password", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(login, Login.class);
+                    login.startActivity(intent);
                 }
             }catch(Exception e)
             {
-                Toast.makeText(Login.this,e.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(login,e.getMessage(), Toast.LENGTH_LONG).show();
             }
         }
     }

@@ -14,30 +14,34 @@
 
     <EditText
         android:id="@+id/username"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="328dp"
+        android:layout_marginTop="388dp"
         android:layout_marginEnd="24dp"
+        android:alpha="255"
         android:autofillHints="@string/prompt_email"
         android:background="@drawable/et_style"
         android:backgroundTint="@android:color/white"
-        android:hint="@string/prompt_email"
+        android:hint="Username"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
         android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#FF888888"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
+        android:alpha="255"
         android:autofillHints="@string/prompt_password"
         android:background="@drawable/et_style"
         android:backgroundTint="@android:color/white"
@@ -47,6 +51,8 @@
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
         android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#FF888888"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,32 +76,27 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="76dp"
         android:src="@drawable/petify_logo_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/Login"
-        android:layout_width="351dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:src="@drawable/loginbtn"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/login_btn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
-
-    <ImageView
-        android:id="@+id/Register"
-        android:layout_width="351dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="21dp"
-        android:src="@drawable/registerbtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

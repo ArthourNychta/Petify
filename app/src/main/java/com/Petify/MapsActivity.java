@@ -134,10 +134,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (client != null) {
             LocationServices.FusedLocationApi.removeLocationUpdates(client, this);
         }
-    }
 
-    public void onClick(View v)
-    {
         Object dataTransfer[] = new Object[2];
         GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
 
