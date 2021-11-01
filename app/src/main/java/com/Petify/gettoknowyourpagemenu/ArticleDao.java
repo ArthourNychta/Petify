@@ -12,10 +12,10 @@ public interface ArticleDao {
     @Query("SELECT * FROM PetifyArticleDB")
     List<Article> getAll();
 
-    @Query(("SELECT * FROM PetifyArticleDB WHERE ArticleId IN (:articleIds)"))
-    List<Article> loadAllbyIds(int[] articleIds);
+    @Query(("SELECT * FROM PetifyArticleDB WHERE ArticleId IN (:ArticleIds)"))
+    List<Article> loadAllbyIds(int[] ArticleIds);
 
-    @Query("SELECT * FROM PetifyArticleDB WHERE ArticleName LIKE :ArticleName"")
+    @Query("SELECT * FROM PetifyArticleDB WHERE ArticleName LIKE :ArticleName")
     Article findByName(String ArticleName);
 
     @Insert
